@@ -70,6 +70,7 @@ namespace LibraryOOP
             Console.WriteLine("----------------------------------------------------------------------------");
             Console.WriteLine("Title  \t\t\t\t Author \t\t\t\t Status");
             Console.WriteLine(Title + " \t\t" + Author + "\t\t\t" + Status);
+            Console.ForegroundColor = ConsoleColor.White;
 
             Console.WriteLine(" ");
         }
@@ -121,7 +122,6 @@ namespace LibraryOOP
                 DateTime current = DateTime.Now;
                 String diff = (current - Date).TotalDays.ToString();
                 double diffNum = Convert.ToInt64(Math.Round(Convert.ToDouble(diff)));
-                Console.BackgroundColor = ConsoleColor.Red;
                 Console.WriteLine($"The book that you are returning is overdue by {diffNum} days!");
                 double fines = diffNum * 5;
                 Console.WriteLine($"Your fine is ${fines}");
